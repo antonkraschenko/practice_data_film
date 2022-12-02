@@ -12,6 +12,7 @@ const personalMovieDB = {
 
 console.log(personalMovieDB);
 
+
 for (let i = 1; i <= 2; i++) {
     
     const a = prompt('Один из последних просмотренных фильмов?','');
@@ -34,5 +35,24 @@ if ( personalMovieDB.count < 10) {
 } else {
     alert('Произошла ошибка');
 }
+
+function showMyDB(obj) {
+    if ( !obj.privat ) {
+        return console.log(obj);
+    }
+}
+showMyDB(personalMovieDB);
+
+function writeYourGenres(obj) {
+    for (let i = 1; i <= 3; i++) {
+        let a = prompt(`Ваш любимый жанр под номером ${i}`,'');
+
+        obj.genres[i] = a;
+    }
+
+}
+
+writeYourGenres(personalMovieDB);
+
 
 
